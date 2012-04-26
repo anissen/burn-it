@@ -1,0 +1,35 @@
+{
+  "name": "burn-it",
+  "description": "Visualize and keep track of burndown data in agile processes",
+  "version": "0.0.1",
+  "homepage": "https://github.com/annissen/burn-it",
+  "author": {
+    "name": "Anders Nissen",
+    "email": "andnis@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/annissen/burn-it.git"
+  },
+  "bugs": {
+    "url": "https://github.com/annissen/burn-it/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/annissen/burn-it/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/burn-it",
+  "engines": {
+    "node": "~0.6.10"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.3.9"
+  },
+  "keywords": []
+}
