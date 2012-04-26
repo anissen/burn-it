@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= title %> - Burn It</title>
+		
+		<!-- Global stylesheets -->
+		<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="/assets/css/jquery.miniColors.css" />
+		<link rel="stylesheet" href="/assets/css/global.css" />
+		<link rel="stylesheet" href="/assets/css/jquery.ui.bootstrap.css" />
+		
+		<!-- Page-specific stylesheets -->
+		<% for(var i in css) { %>
+			<link rel="stylesheet" href="/assets/css/<%= css[i] %>" />
+		<% } %>
+		
+		<!-- Google Analytics -->
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-30425910-1']);
+			//_gaq.push(['_setDomainName', 'domain']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="navbar">
+				<div class="navbar-inner">
+					<div class="container">
+						<a class="brand" href="/">Burn It</a>
+						<ul class="nav">
+							<li><a href="/app">App</a></li>
+							<li><a href="/chart">Chart</a></li>
+							<li><a href="/api">API</a></li>
+						</ul>
+						<ul class="nav pull-right">
+							<li><a href="#">Log in</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<%- body %>
+			<hr>
+			<footer>
+				<p>
+					Copyright 2012 Anders Nissen (<a href="http://twitter.com/andershnissen">@andershnissen</a>). The <a href="http://github.com/anissen">source code</a> is available on github.
+				</p>
+			</footer>
+		</div>
+	</body>
+	
+	<!-- Global scripts -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+	<script src="/assets/js/jquery-plugins.js"></script>
+	
+	<!-- Page-specific scripts -->
+	<% for(var i in js) { %>
+		<script src="<%= ((js[i].charAt(0) == "/") ? "" : "/assets/js/") + js[i] %>"></script>
+	<% } %>
+</html>
