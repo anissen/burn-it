@@ -3,12 +3,7 @@
 Visualize and keep track of burndown data in agile processes
 
 ## Getting Started
-Install the module with: `npm install burn-it`
-
-```javascript
-var burn_it = require('burn-it');
-burn_it.awesome(); // "awesome"
-```
+_(Coming soon)_
 
 ## Documentation
 _(Coming soon)_
