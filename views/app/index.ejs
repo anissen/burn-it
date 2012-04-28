@@ -4,99 +4,101 @@
 </div>
 
 <div class="row">
-	<div class="span2">
-		<h3>Sprint</h3>
-	</div>
-	<div class="span2">
-		<a href="#" class="thumbnail">
-			Week 14-16, 2012
-		</a>
-	</div>
-	<div class="span2">
-		<a href="#" class="thumbnail">
-			Week 16-18, 2012
-		</a>
-	</div>
-	<div class="span2">
-		<a href="#" class="thumbnail">
-			Week 18-20, 2012
-		</a>
-	</div>
+  <div class="span2">
+    <h3>Sprint</h3>
+  </div>
+
+  <!-- Add data-toggle="buttons-radio" for radio style toggling on btn-group -->
+  <!--
+  <div class="btn-group" data-toggle="buttons-radio">
+    <% for (var i = 2; i <= 10; i += 2) { %>
+    <button class="btn">Week <%= i %>, 2012</button>
+    <% } %>
+  </div>
+-->
+
+  <div class="pagination">
+    <ul>
+      <li><a href="#">Prev</a></li>
+      <% for (var i = 2; i <= 10; i += 2) { %>
+      <li <% if (i == 3) { %> class="active" <% } %>>
+        <a href="#">Week <%= i %>-<%= i+2 %>, 2012</a>
+      </li>
+      <% } %>
+      <li><a href="#">Next</a></li>
+    </ul>
+  </div>
 </div>
 
-<hr/> 
 
 <div class="row">
 	<div class="span2">
 		<h3>Sprint day</h3>
 	</div>
-	<% for(var i = 1; i <= 10; i++) { %>
-	<div class="span1">
-		<a href="#" class="thumbnail">
-			Day <%= i %>
-		</a>
-	</div>
-	<% } %>
+
+  <!-- Add data-toggle="buttons-radio" for radio style toggling on btn-group -->
+  <!--
+  <div class="btn-toolbar">
+    <% for (var i = 0; i <= 1; i++) { %>
+    <div class="btn-group" data-toggle="buttons-radio">
+      <% for (var j = 1; j <= 5; j++) { %>
+      <button class="btn">Day <%= (i * 5) + j %></button>
+      <% } %>
+    </div>
+    <% } %>
+  </div>
+  -->
+
+  <div class="pagination">
+    <ul>
+      <li><a href="#">Prev</a></li>
+      <% for (var i = 1; i <= 10; i++) { %>
+      <li <% if (i == 3) { %> class="active" <% } %>>
+        <a href="#">Day <%= i %></a>
+      </li>
+      <% } %>
+      <li><a href="#">Next</a></li>
+    </ul>
+  </div>
 </div>
 
-<hr/> 
 
 <div class="row">
 	<div class="span12">
-		<h3>Burn data</h3>		
-		<form class="form-horizontal">
-      <fieldset>
-        <div class="control-group">
-          <label class="control-label" for="input01">Text input</label>
-          <div class="controls">
-            <input type="text" class="input-xlarge" id="input01">
-            <p class="help-block">In addition to freeform text, any HTML5 text-based input appears like so.</p>
-          </div>
-        </div>
-        <div class="control-group">
-          <label class="control-label" for="optionsCheckbox">Checkbox</label>
-          <div class="controls">
-            <label class="checkbox">
-              <input type="checkbox" id="optionsCheckbox" value="option1">
-              Option one is this and that—be sure to include why it's great
-            </label>
-          </div>
-        </div>
-        <div class="control-group">
-          <label class="control-label" for="select01">Select list</label>
-          <div class="controls">
-            <select id="select01">
-              <option>something</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-          </div>
-        </div>
-        <div class="control-group">
-          <label class="control-label" for="multiSelect">Multicon-select</label>
-          <div class="controls">
-            <select multiple="multiple" id="multiSelect">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-          </div>
-        </div>
-        <div class="control-group">
-          <label class="control-label" for="textarea">Textarea</label>
-          <div class="controls">
-            <textarea class="input-xlarge" id="textarea" rows="3"></textarea>
-          </div>
-        </div>
-        <div class="form-actions">
-          <button type="submit" class="btn btn-primary">Save changes</button>
-          <button class="btn">Cancel</button>
-        </div>
-      </fieldset>
+    <form>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Developer ID</th>
+            <th>On team</th>
+            <th>Focus</th>
+            <th>Burn down</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% var devs = ["ANNI", "FNS", "DRIIS", "OLLS"]; %>
+          <% for (var i in devs) { %>
+          <tr>
+            <td><i class="icon-user"></i> <strong><%= devs[i] %></strong></td>
+            <td><input type="text" placeholder="On team"></td>
+            <td>
+              <input type="text" class="" placeholder="Focus">
+              <i class="icon-question-sign" rel="tooltip" title="Focus on team on a scale [1;10]"></i>
+            </td>
+            <td>
+              <input type="text" placeholder="Burn down">
+              <i class="icon-question-sign" rel="tooltip" title="Burn down syntax:<br/>[task burn]+[task burn]+(...)<br/>E.g.: 5+2+4"></i>
+            </td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Save changes</button>
+        <button class="btn">Cancel</button>
+      </div>
     </form>
+
 	</div>
 </div>
