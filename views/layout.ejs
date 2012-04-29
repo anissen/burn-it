@@ -4,11 +4,11 @@
 		<title><%= title %> - Burn It</title>
 		
 		<!-- Global stylesheets -->
-		<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="/bootstrap/css/bootstrap.css" />
 		<link rel="stylesheet" href="/assets/css/jquery.miniColors.css" />
 		<link rel="stylesheet" href="/assets/css/global.css" />
 		<link rel="stylesheet" href="/assets/css/jquery.ui.bootstrap.css" />
-		
+
 		<!-- Page-specific stylesheets -->
 		<% for(var i in css) { %>
 			<link rel="stylesheet" href="/assets/css/<%= css[i] %>" />
@@ -32,11 +32,11 @@
 			<div class="navbar">
 				<div class="navbar-inner">
 					<div class="container">
-						<a class="brand" href="/">Burn It</a>
+						<a class="brand" href="/"><sub><i class="icon-fire icon-white"></i></sub> Burn It</a>
 						<ul class="nav">
-							<li><a href="/app">App</a></li>
-							<li><a href="/chart">Chart</a></li>
-							<li><a href="/api">API</a></li>
+							<li><a href="/app"><i class="icon-th-list icon-white"></i> App</a></li>
+							<li><a href="/chart"><i class="icon-tasks icon-white"></i> Chart</a></li>
+							<li><a href="/api"><i class="icon-cog icon-white"></i> API</a></li>
 						</ul>
 						<ul class="nav pull-right">
 							<li><a href="#">Log in</a></li>
