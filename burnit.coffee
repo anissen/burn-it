@@ -54,6 +54,15 @@ sockets.configure ->
 ###
 
 # ###########################
+# Set up database connection and models
+# ###########################
+
+
+
+
+
+
+# ###########################
 # Set up apps with namespaces
 # ###########################
 
@@ -72,6 +81,7 @@ service = (require './apps/service')
 	namespace: 'service'
 	burnApp: burnApp
 	underscore: underscore
+	#model: BurnModel
 
 burnApp.get '/', (req, res) ->
 	res.render 'index',
