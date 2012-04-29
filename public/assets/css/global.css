@@ -1,5 +1,7 @@
+
 body { 
     padding-top: 20px;
+    background-image: url('/assets/img/bg.png');
 }
 
 footer { 
