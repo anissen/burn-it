@@ -1,0 +1,30 @@
+
+<div class="row">
+  <div class="span12">
+    <p><em>Example</em> : two (2) resources (<code>/products</code> and <code>/products/XX</code>) and the four (4) HTTP verbs</p>
+
+    <table class="table table-striped">
+      <tr>
+          <th><strong>Resource</strong></th>
+          <th><strong>POST</strong><br>(create)</th>
+          <th><strong>GET</strong><br>(read)</th>
+          <th><strong>PUT</strong><br>(update)</th>
+          <th><strong>DELETE</strong><br>(delete)</th>
+      </tr>
+      <tr>
+          <td><strong>/products</strong></td>
+          <td>create a new product</td>
+          <td>list products</td>
+          <td>bulk update products</td>
+          <td>delete all products</td>
+      </tr>
+      <tr>
+          <td><strong>/products/1234</strong></td>
+          <td>error</td>
+          <td>show 1234</td>
+          <td>if exists update 1234, else error</td>
+          <td>delete 1234</td>
+      </tr>
+   </table>
+  </div>
+</div>

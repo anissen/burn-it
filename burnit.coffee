@@ -68,12 +68,10 @@ app = (require './apps/app')
 	underscore: underscore
 	#socketio: sockets
 
-###
-oauth = (require './burnApps/oauth')
-	namespace : 'oauth'
-	burnApp : burnApp
-	configuration : conf
-###
+service = (require './apps/service')
+	namespace: 'service'
+	burnApp: burnApp
+	underscore: underscore
 
 burnApp.get '/', (req, res) ->
 	res.render 'index',
