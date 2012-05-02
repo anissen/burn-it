@@ -3,6 +3,59 @@
 	<h1>App</h1>
 </div>
 
+
+
+<div class="modal fade" id="myModal" style="display: none;">
+  <div class="modal-header">
+    <button class="close" data-dismiss="modal">×</button>
+    <h3>Create new sprint</h3>
+  </div>
+  <div class="modal-body">
+    <form class="form-horizontal">
+    <fieldset>
+      <div class="control-group">
+        <label class="control-label" for="start-week">Start week</label>
+        <div class="controls">
+          <input type="text" id="start-week" placeholder="Start week">
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="year">Year</label>
+        <div class="controls">
+          <input type="text" id="year" placeholder="Year">
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="duration">Duration</label>
+        <div class="controls">
+          <input type="text" id="duration" placeholder="Duration">
+          <p class="help-block">Duration in weeks.</p>
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="Description">Description</label>
+        <div class="controls">
+          <input type="text" id="Description" placeholder="Description">
+          <p class="help-block">E.g. <em>"Extend user profile page with badges"</em></p>
+        </div>
+      </div>
+      <!--
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Save changes</button>
+        <button class="btn">Cancel</button>
+      </div>
+    -->
+    </fieldset>
+  </form>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn">Close</a>
+    <a href="#" class="btn btn-primary">Save changes</a>
+  </div>
+</div>
+
+
+
 <div class="row">
   <div class="span2">
     <h3>Sprint</h3>
@@ -20,10 +73,10 @@
     </ul>
   </div>
 
-  <!-- <a href="#" class="btn">Add sprint</a> -->
+  <a class="btn" data-toggle="modal" href="#myModal" >Create new sprint</a>
 </div>
 
-
+<!--
 <div class="row">
 	<div class="span2">
 		<h3>Sprint day</h3>
@@ -80,5 +133,30 @@
       </div>
     </form>
 
+    <a href="#" title="" id="add-day-to-sprint">Add day</a>
+
+    <script type="text/javascript">
+      $(function() {
+
+        $('#add-day-to-sprint').on('click', function() {
+          $.post("/service/sprint/2012/18/add-day", {
+            "day": {
+              "day": "1",
+              "comment": "Nothing special",
+              "developerBurndown": [{
+                "developer": "ANNI",
+                "focus": "5",
+                "burndown": ["3","4"]
+              }]
+            }
+          }, function(data, textStatus, jqXHR) {
+              console.log("Post resposne:"); console.dir(data); console.log(textStatus); console.dir(jqXHR);
+          });
+        });
+
+      });
+    </script>
+
 	</div>
 </div>
+-->

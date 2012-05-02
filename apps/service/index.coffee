@@ -26,6 +26,10 @@ module.exports = (input) ->
     year:
       type: Number
       required: true
+    duration:
+      type: Number
+      default: 2
+    description: String
     days: [SprintDaySchema]
 
   SprintDaySchema = new Schema
