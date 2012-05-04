@@ -1,9 +1,180 @@
-
+<!--
 <div class="page-header">
-	<h1>App</h1>
+  <h1>App</h1>
+</div>
+-->
+
+<div class="row">
+  <div class="span12">
+    <ul class="breadcrumb">
+      <li>
+        <a href="#">Home</a> <span class="divider">/</span>
+      </li>
+      <li>
+        <a href="#">App</a> <span class="divider">/</span>
+      </li>
+      <li>
+        <a href="#">Sprint 4</a> <span class="divider">/</span>
+      </li>
+      <li class="active">Day 2</li>
+    </ul>
+  </div>
 </div>
 
+<!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
 
+<section id="sprins">
+  <div class="page-header">
+    <h1>Sprints <small>... like the ground is on fire!</small></h1>
+  </div>
+
+  <div class="row">
+    <div class="span12">
+      <table class="table table-striped table-condensed">
+        <thead>
+          <tr>
+            <th>Sprint ID</th>
+            <th>Start week</th>
+            <th>Year</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% var sprints = [
+            {id: "12-16", startWeek: "16", year: "2012", description: "Implementing  PayPal"}, 
+            {id: "12-18", startWeek: "18", year: "2012", description: "Completing the new front page"},
+            {id: "12-20", startWeek: "20", year: "2012", description: "Refactor SRP"}
+            ]; %>
+          <% for (var i in sprints) { %>
+          <tr>
+            <td><a href="#"><i class="icon-tag"></i> <strong><%= sprints[i].id %></strong></a></td>
+            <td><%= sprints[i].startWeek %></td>
+            <td><%= sprints[i].year %></td>
+            <td></i> <%= sprints[i].description %></td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+
+      <a class="btn" data-toggle="modal" href="#myModal" >Create new sprint</a>
+    </div>
+  </div>
+</section>
+
+<!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+<!--
+<div class="row">
+  
+  <div class="span2">
+    <h3>Sprint</h3>
+  </div>
+  
+
+  <div class="pagination">
+    <ul>
+      <li><a href="#">Prev</a></li>
+      <% for (var i = 2; i <= 10; i += 2) { %>
+      <li <% if (i == 3) { %> class="active" <% } %>>
+        <a href="#">Week <%= i %>-<%= i+2 %></a>
+      </li>
+      <% } %>
+      <li><a href="#">Next</a></li>
+    </ul>
+  </div>
+
+  
+</div>
+-->
+
+<!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+
+<!--
+<ul id="myTab" class="nav nav-tabs">
+  <li class=""><a href="#home" data-toggle="tab">Sprint 1</a></li>
+  <li class=""><a href="#profile" data-toggle="tab">Sprint 2</a></li>
+  <li class="dropdown active">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sprint 3 <b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li class="active"><a href="#dropdown1" data-toggle="tab">Day 1</a></li>
+      <li class=""><a href="#dropdown2" data-toggle="tab">Day 2</a></li>
+      <li class=""><a href="#dropdown3" data-toggle="tab">Day 3</a></li>
+      <li class=""><a href="#dropdown4" data-toggle="tab">Day 4</a></li>
+    </ul>
+  </li>
+  <li class="nav pull-right"><a href="#profile" data-toggle="tab">Add sprint</a></li>
+</ul>
+-->
+
+<!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+
+<!--
+<div class="row">
+  <ul class="nav nav-list well span2">
+    <li class="nav-header">List header</li>
+    <li class="active"><a href="#"><i class="icon-white icon-home"></i> Home</a></li>
+    <li><a href="#"><i class="icon-book"></i> Library</a></li>
+    <li><a href="#"><i class="icon-pencil"></i> Applications</a></li>
+    <li class="nav-header"><a href="#">Sprint 1</a> <i class="icon-cog"></i></li>
+    <li><a href="#"><i class="icon-user"></i> Day 1</a></li>
+    <li><a href="#"><i class="icon-user"></i> Day 2</a></li>
+    <li><a href="#"><i class="icon-user"></i> Day 3</a></li>
+    <li class="nav-header">Sprint 1 <i class="icon-cog"></i></li>
+    <li><a href="#"><i class="icon-cog"></i> Settings</a></li>
+    <li class="divider"></li>
+    <li><a href="#"><i class="icon-flag"></i> Help</a></li>
+  </ul>
+</div>
+-->
+
+<!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+
+<!--
+<div class="row">
+  <div class="tabbable">
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#lA" data-toggle="tab">Sprint 1Sprint 1Sprint 1Sprint 1Sprint 1Sprint 1</a></li>
+      <li class=""><a href="#lB" data-toggle="tab">Sprint 2</a></li>
+      <li class=""><a href="#lC" data-toggle="tab">Sprint 3</a></li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane active" id="lA">
+        <p>I'm in Sprint A.</p>
+        <p>I'm in Sprint A.</p>
+        <p>I'm in Sprint A.</p>
+      </div>
+      <div class="tab-pane" id="lB">
+
+
+        <div class="tabbable tabs-left">
+          <ul class="nav nav-tabs span2">
+            <li class="active"><a href="#l2A" data-toggle="tab">Day 1</a></li>
+            <li class=""><a href="#l2B" data-toggle="tab">Day 2</a></li>
+            <li class=""><a href="#l2C" data-toggle="tab">Day 3</a></li>
+          </ul>
+          <div class="tab-content span8">
+            <div class="tab-pane active" id="l2A">
+              <p>I'm in day A.I'm in day A.I'm in day A.I'm in day A.I'm in day A.I'm in day A.I'm in day A.I'm in day A.I'm in day A.I'm in day A.I'm in day A.I'm in day A.I'm in day A.I'm in day A.I'm in day A.I'm in day A.I'm in day A.I'm in day A.I'm in day A.I'm in day A.I'm in day A.I'm in day A.I'm in day A.I'm in day A.I'm in day A.I'm in day A.I'm in day A.</p>
+            </div>
+            <div class="tab-pane" id="l2B">
+              <p>Howdy, I'm in day B.</p>
+            </div>
+            <div class="tab-pane" id="l2C">
+              <p>What up girl, this is day C.</p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="tab-pane" id="lC">
+        <p>What up girl, this is Sprint C.</p>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+<!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
 
 <div class="modal fade" id="myModal" style="display: none;">
   <div class="modal-header">
@@ -54,27 +225,9 @@
   </div>
 </div>
 
+<!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
 
 
-<div class="row">
-  <div class="span2">
-    <h3>Sprint</h3>
-  </div>
-
-  <div class="pagination">
-    <ul>
-      <li><a href="#">Prev</a></li>
-      <% for (var i = 2; i <= 10; i += 2) { %>
-      <li <% if (i == 3) { %> class="active" <% } %>>
-        <a href="#">Week <%= i %>-<%= i+2 %>, 2012</a>
-      </li>
-      <% } %>
-      <li><a href="#">Next</a></li>
-    </ul>
-  </div>
-
-  <a class="btn" data-toggle="modal" href="#myModal" >Create new sprint</a>
-</div>
 
 <!--
 <div class="row">
